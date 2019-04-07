@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{507e5098-f790-49e6-b784-17053caa6faf}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartupFile>server.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="public\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="public\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\css\NewChatbot.css" />
+    <Content Include="public\img\logo_watson.jpg" />
+    <Content Include="public\img\user.png" />
+    <Content Include="public\img\attendant.png" />
+    <Content Include="public\img\watson.png" />
+    <Compile Include="app.js" />
+    <Compile Include="casper-runner.js" />
+    <Compile Include="public\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Compile Include="public\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Compile Include="public\bootstrap-3.3.7-dist\js\npm.js" />
+    <Compile Include="server.js" />
+    <Content Include="public\index.html" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\ibm-glyph.svg" />
+    <Content Include="public\fonts\ibm-icons.svg" />
+    <Content Include="public\img\background.jpg" />
+    <Content Include="public\img\_background.jpg" />
+    <Content Include="public\img\loading.gif" />
+    <Compile Include="public\js\api.js" />
+    <Compile Include="public\js\common.js" />
+    <Compile Include="public\js\conversation.js" />
+    <Compile Include="public\js\global.js" />
+    <Compile Include="public\js\payload.js" />
+    <Compile Include="test\integration\test.mainpage.js" />
+    <Compile Include="test\unit\test.express.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public" />
+    <Folder Include="public\bootstrap-3.3.7-dist\" />
+    <Folder Include="public\bootstrap-3.3.7-dist\css\" />
+    <Folder Include="public\bootstrap-3.3.7-dist\fonts\" />
+    <Folder Include="public\bootstrap-3.3.7-dist\js\" />
+    <Folder Include="public\css" />
+    <Folder Include="public\fonts" />
+    <Folder Include="public\fonts\bold" />
+    <Folder Include="public\fonts\bold-italic" />
+    <Folder Include="public\fonts\light" />
+    <Folder Include="public\fonts\light-italic" />
+    <Folder Include="public\fonts\medium" />
+    <Folder Include="public\fonts\medium-italic" />
+    <Folder Include="public\fonts\roman" />
+    <Folder Include="public\fonts\roman-italic" />
+    <Folder Include="public\img" />
+    <Folder Include="public\js" />
+    <Folder Include="test" />
+    <Folder Include="test\integration" />
+    <Folder Include="test\unit" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

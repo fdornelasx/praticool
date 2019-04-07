@@ -1,0 +1,91 @@
+<html>
+<head>
+    <base href="/">
+    <title>Praticool Predictions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Service Desk" />
+    <meta property="og:description" content="Resolva todos os os seus problemas com o nosso service desk" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/NewChatbot.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <script>
+        var Message;
+        var message_side = 'right';
+        var getMessageText = function () {
+            var $message_input;
+            $message_input = $('.message_input');
+            return $message_input.val();
+        };
+        var sendMessage = function (text, side) {
+            var $messages, message;
+            if (text.trim() === '') {
+                return;
+            }
+
+            $messages = $('.messages');
+            message = new Message({
+                text: text,
+                message_side: side
+            });
+            message.draw();
+            return $messages.animate({ scrollTop: $messages.prop('scrollHeight') }, 300);
+        };
+        (function () {
+
+            Message = function (arg) {
+                this.text = arg.text, this.message_side = arg.message_side;
+                this.draw = function (_this) {
+                    return function () {
+                        var $message;
+                        $message = $($('.message_template').clone().html());
+                        $message.addClass(_this.message_side).find('.text').html(_this.text);
+                        $('.messages').append($message);
+                        return setTimeout(function () {
+                            return $message.addClass('appeared');
+                        }, 0);
+                    };
+                }(this);
+                return this;
+            };
+
+        }.call(this));
+    </script>
+</head>
+<body>
+
+    <div class="chat_window">
+        <div class="top_menu">
+            <div class="buttons">
+            </div>
+            <div class="title">Praticool Assitant</div>
+        </div>
+        <ul class="messages"></ul>
+        <div class="bottom_wrapper clearfix">
+            <div class="message_input_wrapper">
+                <input class="message_input" placeholder="Digite uma mensagem..." onkeydown="ConversationPanel.inputKeyDown(event, this)" />
+            </div>
+        </div>
+    </div>
+    <div class="message_template">
+        <li class="message">
+            <div class="avatar"></div>
+            <div class="text_wrapper">
+                <div class="text"></div>
+            </div>
+        </li>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/conversation.js"></script>
+    <script src="js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+    background-color: white;
+    color: rgba(red, green, blue, alpha);
+}
+p {
+    text-align: justify;
+    text-indent: 5px;
+}
+
+figure.logo {
+    top: 100%;
+    left: 100%;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color:#272727;
+    padding: 1em;
+    margin: 1em;
+    transition: background-color 1s;
+}
+nav#menu li:hover {
+    background-color: #606060
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: white;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.footer-main-div {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #272727;
+    padding: 5px 0px;
+    color:rgb(255, 255, 255);
+    float: left;
+}
+
+.footer-menu{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #000000;
+    padding: 50px 0px;
+    color: white;
+    list-style: none;
+    text-transform: uppercase;
+	font-family: Helvetica, Arial, sans-serif; 
+}
+
+nav#menu{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #272727;
+    padding: 1px 0px;
+}
+
+.logo {
+    background: url("../_img/btp.png") center;
+    background-size: cover;
+    min-height: 300px; 
+}
+
+menu li  ul{
+    position:absolute; 
+    top:25px; 
+    left:0;
+    background-color:#fff; 
+    display:none;
+    }   
+
+    section, article, aside, footer, header, nav, hgroup {
+        display:block;
+      }
+	  
+.mensagem {
+	font-family: Helvetica, Arial, sans-serif; 
+}
+
+p {font-family: Helvetica, Arial, sans-serif; 
+font-size: 15px; 
+} 
